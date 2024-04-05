@@ -139,7 +139,12 @@ body {
 .button-secondary:hover {
 	color: var(--Eucalyptus);
 }
-
+@media screen and (min-width: 1024px) {
+	.button {
+		font-size: 18px;
+		letter-spacing: -0.18px;
+	}
+}
 /* Misc Utility */
 .underline {
 	text-decoration: underline 3px var(--Eucalyptus);
@@ -162,14 +167,7 @@ body {
 	padding: 32px 16px 139px 16px;
 	gap: 64px;
 }
-@media screen and (min-width: 768px) {
-	.section-1 {
-		padding: 32px 39px 167px 39px;
-		background-image: url('./assets/images/bg-pattern-1.svg'), url('./assets/images/bg-pattern-2.svg');
-		background-repeat: no-repeat, no-repeat;
-		background-position: -225px 90px, calc(100% + 95px) 255px;
-	}
-}
+
 
 nav {
 	width: 100%;
@@ -196,10 +194,34 @@ nav {
 	z-index: 1;
 }
 @media screen and (min-width: 768px) {
+	.section-1 {
+		padding: 32px 39px 167px 39px;
+		background-image: url('./assets/images/bg-pattern-1.svg'), url('./assets/images/bg-pattern-2.svg');
+		background-repeat: no-repeat, no-repeat;
+		background-position: -225px 90px, calc(100% + 95px) 255px;
+	}
 	.hero-image {
 		width: 514px;
 		height: 296px;
 		transform: translate(-45%, -50%);
+	}
+}
+@media screen and (min-width: 1024px) {
+	.section-1 {
+		padding-top: 56px;
+		padding-bottom: 258px;
+		background-position: -135px 140px, calc(100% + 47px) 345px;
+	}
+	nav {
+		max-width: 1110px;
+	}
+	.hero {
+		gap: 56px;
+	}
+	.hero-image {
+		width: 767px;
+		height: 441px;
+		transform: translate(-45%, -62%);
 	}
 }
 
@@ -262,6 +284,23 @@ nav {
 		align-items: flex-start;
 		gap: 16px;
 	}
+}
+@media screen and (min-width: 1024px) {
+	.features {
+		padding: 255px 165px 103px 165px;
+		flex-direction: row;
+		align-items: flex-start;
+	}
+	.features-item {
+		flex-direction: column;
+		gap: 56px;
+	}
+	.features-content {
+		align-items: center;
+		text-align: center;
+		gap: 28px;
+	}
+	
 }
 
 .section-3::before {
@@ -341,6 +380,31 @@ img.founder  {
 		bottom: -98px;
 	}
 }
+@media screen and (min-width: 1024px) {
+	.section-3 {
+		padding-top: 178px;
+		padding-bottom: 121px;
+	}
+	.section-3 .wrapper {
+		max-width: 1112px;
+		width: 100%;
+		height: 586px;
+	}
+	img.founder {
+		width: 477px;
+		height: 477px;
+	}
+	.call-to-action {
+		width: 730px;
+		height: 413px;
+		padding: 64px;
+		gap: 32px;
+	}
+	.call-to-action::after {
+		right: 113px;
+		bottom: -46px;
+	}
+}
 
 
 .section-4 {
@@ -358,10 +422,17 @@ img.founder  {
 	display: flex;
 	gap: 28px;
 }
-.social-links img {
-	height: 20px;
-	width: 20px;
+.social-links i {
+	color: var(--Davys-grey);
+	font-size: 20px;
+	transition: 0.3s ease;
+	cursor: pointer;
 }
+.social-links i:hover {
+	color: var(--Dark-purple);
+}
+
+
 
 
 
